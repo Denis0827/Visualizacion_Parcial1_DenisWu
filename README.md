@@ -1,4 +1,4 @@
-# VD | The Last Battle | Maqueta inicial web (HTML, CSS, Svelte)
+# VD | Maqueta inicial web (HTML, CSS, Svelte)
 
 <!-- image .md -->
 ![VD](Preview.png)
