@@ -12,6 +12,9 @@ Un llamado ancestral ha reunido a cada uno de los guerreros, quienes han crecido
 
 No solo son combatientes. Son vikingos que cuentan historias. Brak el Gladiador, quien ha estado en constante ascenso, tendrá que enfrentarse ahora con guerreros como Hargoth el Imbatible, cuyo poder ya había alcanzado a la cima convirtiéndose en una leyenda viviente. De a poco, Brak pierde cada vez más fuerza, mientras que Hargoth sigue casi intacto. ¿Será el fin del pequeño guerrero?
 
+## Catálogo:
+![VD](Catalogo.png)
+
 ## Estructura de archivos:
 ![VD](estructura_archivos.png)
 
