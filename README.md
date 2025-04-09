@@ -1,7 +1,7 @@
 # VD | Maqueta inicial web (HTML, CSS, Svelte)
 
 <!-- image .md -->
-![VD](thumbnail.png)
+![VD](Preview.png)
 
 ---
 
