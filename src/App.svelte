@@ -3,6 +3,209 @@
   /* Importamos d3 para tenerlo disponible */
   import * as d3 from 'd3'
 
+  /* Sprites */
+  let p1 = "./images/personaje1.png";
+  let p2 = "./images/personaje2.png";
+  let p3 = "./images/personaje3.png";
+  let p4 = "./images/personaje4.png";
+  let p5 = "./images/personaje5.png";
+  let p6 = "./images/personaje6.png";
+  let p7 = "./images/personaje7.png";
+  let p8 = "./images/personaje8.png";
+  let p9 = "./images/personaje9.png";
+  let p10 = "./images/personaje10.png";
+  let p11 = "./images/personaje11.png";
+  let p12 = "./images/personaje12.png";
+  let p13 = "./images/personaje13.png";
+  let p14 = "./images/personaje14.png";
+  let p15 = "./images/personaje15.png";
+  let p16 = "./images/personaje16.png";
+
+  /* Avatares */
+  let a1 = "./images/avatar1.png";
+  let a2 = "./images/avatar2.png";  
+  let a3 = "./images/avatar3.png";  
+  let a4 = "./images/avatar4.png";  
+  let a5 = "./images/avatar5.png";  
+  let a6 = "./images/avatar6.png";  
+  let a7 = "./images/avatar7.png";  
+  let a8 = "./images/avatar8.png";  
+  let a9 = "./images/avatar9.png";  
+  let a10 = "./images/avatar10.png";  
+
+  let players = [
+    { sprite: p1, width: "8.5rem", height: "8rem", avatar: a1, vida: 24, nombre: "Brak" },
+    { sprite: p14, width: "8.75rem", height: "10.15rem", avatar: a10, vida: 33, nombre: "Poki" },
+    { sprite: p3, width: "12.7rem", height: "11.5rem", avatar: a9, vida: 42, nombre: "Bocón" },
+    { sprite: p4, width: "13rem", height: "11.75rem", avatar: a4, vida: 54, nombre: "Hakon" },
+    { sprite: p10, width: "14rem", height: "13rem", avatar: a5, vida: 63, nombre: "Viggo" },
+    { sprite: p11, width: "14rem", height: "14.5rem", avatar: a6, vida: 71, nombre: "Kolska" },
+    { sprite: p13, width: "17rem", height: "15rem", avatar: a7, vida: 77, nombre: "Zerak" },
+    { sprite: p2, width: "15.5rem", height: "15.8rem", avatar: a8, vida: 87, nombre: "Hargoth" },
+    { sprite: p16, width: "18rem", height: "16.25rem", avatar: a3, vida: 92, nombre: "Torvald" },
+    { sprite: p6, width: "14.5rem", height: "17rem", avatar: a2, vida: 98, nombre: "Ragnar" }
+  ]
+
+  let player_actual = players[0];
+  let player_actual_rival = players[7];  
+
+  /* Sprites */
+  let sprite_actual = players[0].sprite;
+  let sprite_actual_rival = players[7].sprite;
+
+  let avatar_actual = players[0].avatar;
+  let avatar_actual_rival = players[7].avatar;
+
+  /* Tamaño*/
+  let ancho_actual = players[0].width;
+  let altura_actual = players[0].height;
+
+  let ancho_actual_rival = players[7].width;
+  let altura_actual_rival = players[7].height;
+
+  let espacio_padding = (15.2 - parseFloat(altura_actual_rival) + 8.5).toString() + "rem";
+  let mover = (10 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
+
+  /* Vida */
+  let vida_actual = players[0].vida;
+  let vida_actual_rival = players[7].vida;
+
+  let factor = 7.75;
+
+  /* Valores escalados para el catalogo */
+  let catalogoPlayers = players.map(player => ({
+    ...player,
+    width: (parseFloat(player.width) * factor).toString() + "rem",
+    height: (parseFloat(player.height) * factor).toString() + "rem"
+  }));
+
+  function spriteAnterior() {
+    if (player_actual == players[1]) {
+      player_actual = players[0];
+    } else if (player_actual == players[2]) {
+      player_actual = players[1];
+    } else if (player_actual == players[3]) {
+      player_actual = players[2];
+    } else if (player_actual == players[4]) {
+      player_actual = players[3];
+    } 
+
+    sprite_actual = player_actual.sprite;
+    ancho_actual = player_actual.width;
+    altura_actual = player_actual.height;
+    vida_actual = player_actual.vida;
+    avatar_actual = player_actual.avatar;
+
+    if (sprite_actual_rival == players[8].sprite) {
+      mover = (7 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
+    } else if (sprite_actual_rival == players[9].sprite) {
+      mover = (11 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
+    }  else {
+      mover = (10 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
+    }
+
+  }
+
+  function spriteSiguiente() {
+    if (player_actual == players[0]) {
+      player_actual = players[1];
+    } else if (player_actual == players[1]) {
+      player_actual = players[2];
+    } else if (player_actual == players[2]) {
+      player_actual = players[3];
+    } else if (player_actual == players[3]) {
+      player_actual = players[4];
+    } 
+
+    sprite_actual = player_actual.sprite;
+    ancho_actual = player_actual.width;
+    altura_actual = player_actual.height;
+    vida_actual = player_actual.vida;
+    avatar_actual = player_actual.avatar;
+
+    if (sprite_actual_rival == players[8].sprite) {
+      mover = (7 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
+    } else if (sprite_actual_rival == players[9].sprite) {
+      mover = (11 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
+    }  else {
+      mover = (10 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
+    }
+  }
+
+  function spriteAnterior_rival() {
+    if (player_actual_rival == players[6]) {
+      player_actual_rival = players[5];
+    } else if (player_actual_rival == players[7]) {
+      player_actual_rival = players[6];
+    } else if (player_actual_rival == players[8]) {
+      player_actual_rival = players[7];
+    } else if (player_actual_rival == players[9]) {
+      player_actual_rival = players[8];
+    } 
+
+    sprite_actual_rival = player_actual_rival.sprite;
+    ancho_actual_rival = player_actual_rival.width;
+    altura_actual_rival = player_actual_rival.height;
+    vida_actual_rival = player_actual_rival.vida;
+    avatar_actual_rival = player_actual_rival.avatar;
+
+    espacio_padding = (15.2 - parseFloat(altura_actual_rival) + 8.5).toString() + "rem";
+
+    if (sprite_actual_rival == players[8].sprite) {
+      mover = (7 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
+    } else if (sprite_actual_rival == players[9].sprite) {
+      mover = (11 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
+    }  else {
+      mover = (10 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
+    }
+  }
+
+  function spriteSiguiente_rival() {
+    if (player_actual_rival == players[5]) {
+      player_actual_rival = players[6];
+    } else if (player_actual_rival == players[6]) {
+      player_actual_rival = players[7];
+    } else if (player_actual_rival == players[7]) {
+      player_actual_rival = players[8];
+    } else if (player_actual_rival == players[8]) {
+      player_actual_rival = players[9];
+    } 
+
+    sprite_actual_rival = player_actual_rival.sprite;
+    ancho_actual_rival = player_actual_rival.width;
+    altura_actual_rival = player_actual_rival.height;
+    vida_actual_rival = player_actual_rival.vida;
+    avatar_actual_rival = player_actual_rival.avatar;
+
+    espacio_padding = (15.2 - parseFloat(altura_actual_rival) + 8.5).toString() + "rem";
+
+    if (sprite_actual_rival == players[8].sprite) {
+      mover = (7 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
+    } else if (sprite_actual_rival == players[9].sprite) {
+      mover = (11 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
+    }  else {
+      mover = (10 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
+    }
+
+    if (vida_actual_rival == 0) {
+      player_actual_rival = players[10];
+      sprite_actual_rival = player_actual_rival.sprite;
+      ancho_actual_rival = player_actual_rival.width;
+      altura_actual_rival = player_actual_rival.height;
+      vida_actual_rival = player_actual_rival.vida;
+    }
+  }
+
+  let valor = 100;
+
+const intervalo = setInterval(() => {
+  if (valor > 0) {
+    valor--;
+  } else {
+    clearInterval(intervalo); // Detiene el intervalo cuando llega a 0
+  }
+}, 1000);
+
 </script>
 
 <!-- Estructura contenido HTML -->
@@ -10,43 +213,66 @@
   <h1 class="title blanco">The Last Battle</h1>
   
   <div class="linea">
-    <hr style="width: 43em;">
+    <hr style="width: 40em;">
   </div>
 
   <h3 class="subtitle blanco">¿Crees que tienes lo suficiente para ganar esta pelea?</h3>
 
   <div class="linea">
-    <hr style="width: 20em;">
+    <hr style="width: 40em;">
   </div>
 
   <div class="visualizacion1 fondo">
 
     <div class="barra_flex">
       <div class="avatar_flex">
-        <img class="avatar" src="./images/avatar1.png" alt="avatar1"/>
+        <img class="avatar" src={avatar_actual} alt="avatar1"/>
         <div class="barra1">
-          <div class="vida1">
-            <p class="tamaño_vidaN24 blanco">24%</p>
-          </div>
+          {#if vida_actual > 70}
+            <div style="height: 100%; width: {vida_actual}%; background-color: green;">
+              <p class="tamaño_vidaN24 blanco">{vida_actual}%</p>
+            </div>
+          {:else if vida_actual > 35}
+            <div style="height: 100%; width: {vida_actual}%; background-color: orange;">
+              <p class="tamaño_vidaN24 blanco">{vida_actual}%</p>
+            </div>
+          {:else}
+            <div style="height: 100%; width: {vida_actual}%; background-color: red;">
+              <p class="tamaño_vidaN24 blanco">{vida_actual}%</p>
+            </div>
+          {/if}
         </div>
       </div>
       
       <div class="avatar_flex">
         <div class="barra2">
-          <div class="vida2">
-            <p class="tamaño_vidaN87 blanco">87%</p>
+          {#if vida_actual_rival > 70}
+          <div style="height: 100%; width: {vida_actual_rival}%; background-color: green;">
+            <p class="tamaño_vidaN87 blanco">{vida_actual_rival}%</p>
           </div>
+          {:else if vida_actual_rival > 35}
+          <div style="height: 100%; width: {vida_actual_rival}%; background-color: orange;">
+            <p class="tamaño_vidaN87 blanco">{vida_actual_rival}%</p>
+          </div>
+          {:else}
+          <div style="height: 100%; width: {vida_actual_rival}%; background-color: red;">
+            <p class="tamaño_vidaN87 blanco">{vida_actual_rival}%</p>
+          </div>
+          {/if}
         </div>
-        <img class="avatar" src="./images/avatar2.png" alt="avatar2"/>
+        <img class="avatar" src={avatar_actual_rival} alt="avatar2"/>
       </div>
         
     </div>
 
+    <!--
     <div class="escudo_flex">
       <img class="escudo" src="./images/escudo.png" alt="escudo"/>
     </div>
+    -->
 
 
+    <!--
     <div class="borde_flex">
 
       <svg class="borde_p1" viewBox="0 0 195 184" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -58,24 +284,41 @@
         </svg>
           
     </div>
+    -->
 
-
-    <div class="player_flex">
-
+    <div class="player_flex" style="padding-top: {espacio_padding}">
+      
       <div class="item">
-        <img class="player1" src="./images/personaje1.png" alt="person"/>
+        <img style="width: {ancho_actual}; height: {altura_actual};" src={sprite_actual} alt="person"/>
       </div>
 
-      <div class="item">
-        <img class="player2" src="./images/personaje2.png" alt="person"/>
+      <div class="item" style="padding-left: {mover};">
+        <img style="width: {ancho_actual_rival}; height: {altura_actual_rival};" class="player2" src={sprite_actual_rival} alt="person"/>
       </div>
 
     </div>
 
+    <div class="flechas_container"> 
+
+      <button class="boton1" on:click={spriteAnterior}>
+        <img class="flecha" src="./images/flecha_izq.svg" alt="flecha_izq"/>
+      </button>
+
+      <button class="boton1" on:click={spriteSiguiente}>
+        <img class="flecha" src="./images/flecha_der.svg" alt="flecha_izq"/>
+      </button>
+
+      <button class="boton2" on:click={spriteAnterior_rival}>
+        <img class="flecha" src="./images/flecha_izq.svg" alt="flecha_izq"/>
+      </button>
+
+      <button class="boton1" on:click={spriteSiguiente_rival}>
+        <img class="flecha" src="./images/flecha_der.svg" alt="flecha_izq"/>
+      </button>
+
+    </div>
 
   </div>
-
-  
 
   <div class="texto_flex visualizacion2">
     <div>
@@ -86,9 +329,9 @@
       <p class="blanco tamaño_texto">
         En el reino de Valdranor, la Arena de los Campeones era el lugar donde solo los guerreros más valientes podían demostrar su honor. Durante siglos, grandes batallas se habían librado allí, pero ninguna como la que estaba por suceder. <br> <br>
 
-        <i>Brak el Gladiador</i>, ha estado consiguiendo cada vez más fama por haber vencido a cientos de oponentes que lo superaban en tamaño y fuerza. Pero ahora, se enfrentará a su prueba final: <i> Hargoth el Imbatible. </i> <br> <br>
-        
-        Hargoth no es solo un guerrero Vikingo, es una leyenda viviente. Se decía que su espada había sido forjada con el fuego de los dioses y su escudo había resistido miles de batallas sin quebrarse. Con una fuerza descomunal, había derribado ejércitos enteros. ¿Podrá Brak vencer a tal temible oponente?
+        Un llamado ancestral ha reunido a cada uno de los guerreros, quienes han crecido en fuerza con sus enfrentamientos y victorias pasados. El tamaño de cada figura simboliza su poder, sus habilidades, su valor y su reputación. <br> <br>
+
+        No solo son combatientes. Son vikingos que cuentan historias. <i>Brak el Gladiador</i>, quien ha estado en constante ascenso, tendrá que enfrentarse ahora con guerreros como <i>Hargoth el Imbatible</i>, cuyo poder ya había alcanzado a la cima convirtiéndose en una leyenda viviente. De a poco, Brak pierde cada vez más fuerza, mientras que Hargoth sigue casi intacto. ¿Será el fin del pequeño guerrero?
       </p>
     </div>
     
@@ -107,8 +350,6 @@
           </div>
   
         </div>
-  
-        
     
         <div class="medicion">
   
@@ -131,6 +372,30 @@
           <p class="blanco player_magnitudN87">87</p>
         </div>
       </div>
+    </div>
+
+  </div>
+
+  <div class="catalogo">
+    <div>
+      <h2 class="blanco">Elige tu guerrero favorito</h2>
+    </div>
+
+
+    <div class="catalogo_flex">
+      {#each catalogoPlayers as player} 
+        <div class="datos_flex">
+          {#if player.vida > 70 }
+            <p style="font-size:0.9rem;" class="verde">{player.vida}</p>
+          {:else if player.vida > 35}
+            <p style="font-size:0.9rem; color:orange">{player.vida}</p>
+          {:else}
+            <p style="font-size:0.9rem; color:red">{player.vida}</p>
+          {/if}
+          <img src={player.sprite} alt="catalogo" width={player.width} height={player.height}/>
+          <p style="font-size:1.05rem; color: white;">{player.nombre}</p>
+        </div>
+      {/each}
     </div>
 
   </div>
