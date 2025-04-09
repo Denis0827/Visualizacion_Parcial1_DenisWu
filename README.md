@@ -1,4 +1,4 @@
-<img width="638" alt="image" src="https://github.com/user-attachments/assets/e2157dc0-5de1-44c0-a763-49bae09c6107" /># VD | Maqueta inicial web (HTML, CSS, Svelte)
+# VD | Maqueta inicial web (HTML, CSS, Svelte)
 
 <!-- image .md -->
 ![VD](Preview.png)
