@@ -8,6 +8,11 @@ body {
     background-color: #22346D;
 }
 
+main {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
 h1 {
     text-align: center;
     padding: 1.5rem;
@@ -25,12 +30,24 @@ img {
     color: red;
 }
 
+.rojo2 {
+    color: #ff1e00;
+}
+
 .gris {
     color: rgba(225, 225, 225, 0.721);
 }
 
 .verde {
     color: rgb(25, 194, 25);
+}
+
+.azul {
+    color: #3fb5ff;
+}
+
+.dorado {
+    color: #FFD700;
 }
 
 .color_borde1 {
@@ -290,4 +307,31 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.zoom {
+    transition: transform 0.3s ease;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.2); 
+  }
+  
+footer {
+    margin-top: 5rem; 
+    padding: 2rem 10rem 2.5rem 10rem ;
+    background-color: #0b1f5b;
+}
+
+.footer_contenedor {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+}
+
+.redes_contenedor {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    gap: 4px;
 }

@@ -40,10 +40,10 @@
     { sprite: p4, width: "13rem", height: "11.75rem", avatar: a4, vida: 54, nombre: "Hakon" },
     { sprite: p10, width: "14rem", height: "13rem", avatar: a5, vida: 63, nombre: "Viggo" },
     { sprite: p11, width: "14rem", height: "14.5rem", avatar: a6, vida: 71, nombre: "Kolska" },
-    { sprite: p13, width: "17rem", height: "15rem", avatar: a7, vida: 77, nombre: "Zerak" },
+    { sprite: p6, width: "12.5rem", height: "15rem", avatar: a2, vida: 77, nombre: "Ragnar" },
     { sprite: p2, width: "15.5rem", height: "15.8rem", avatar: a8, vida: 87, nombre: "Hargoth" },
     { sprite: p16, width: "18rem", height: "16.25rem", avatar: a3, vida: 92, nombre: "Torvald" },
-    { sprite: p6, width: "14.5rem", height: "17rem", avatar: a2, vida: 98, nombre: "Ragnar" }
+    { sprite: p13, width: "19rem", height: "16.5rem", avatar: a7, vida: 98, nombre: "Zerak" }
   ]
 
   let player_actual = players[0];
@@ -98,9 +98,11 @@
 
     if (sprite_actual_rival == players[8].sprite) {
       mover = (7 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
+    } else if (sprite_actual_rival == players[6].sprite) {
+      mover = (11.75 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
     } else if (sprite_actual_rival == players[9].sprite) {
-      mover = (11 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
-    }  else {
+      mover = (8.75 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
+    } else {
       mover = (10 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
     }
 
@@ -125,8 +127,10 @@
 
     if (sprite_actual_rival == players[8].sprite) {
       mover = (7 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
+    } else if (sprite_actual_rival == players[6].sprite) {
+      mover = (11.75 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
     } else if (sprite_actual_rival == players[9].sprite) {
-      mover = (11 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
+      mover = (8.75 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
     }  else {
       mover = (10 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
     }
@@ -153,8 +157,10 @@
 
     if (sprite_actual_rival == players[8].sprite) {
       mover = (7 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
+    } else if (sprite_actual_rival == players[6].sprite) {
+      mover = (11.75 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
     } else if (sprite_actual_rival == players[9].sprite) {
-      mover = (11 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
+      mover = (8.75 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
     }  else {
       mover = (10 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
     }
@@ -181,8 +187,10 @@
 
     if (sprite_actual_rival == players[8].sprite) {
       mover = (7 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
+    } else if (sprite_actual_rival == players[6].sprite) {
+      mover = (11.75 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
     } else if (sprite_actual_rival == players[9].sprite) {
-      mover = (11 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
+      mover = (8.75 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
     }  else {
       mover = (10 - (parseFloat(ancho_actual) - 8)).toString() + "rem";
     }
@@ -216,7 +224,7 @@ const intervalo = setInterval(() => {
     <hr style="width: 40em;">
   </div>
 
-  <h3 class="subtitle blanco">¿Crees que tienes lo suficiente para ganar esta pelea?</h3>
+  <h3 class="subtitle blanco">¿Crees que tienes lo suficiente para ganar esta batalla?</h3>
 
   <div class="linea">
     <hr style="width: 40em;">
@@ -329,9 +337,9 @@ const intervalo = setInterval(() => {
       <p class="blanco tamaño_texto">
         En el reino de Valdranor, la Arena de los Campeones era el lugar donde solo los guerreros más valientes podían demostrar su honor. Durante siglos, grandes batallas se habían librado allí, pero ninguna como la que estaba por suceder. <br> <br>
 
-        Un llamado ancestral ha reunido a cada uno de los guerreros, quienes han crecido en fuerza con sus enfrentamientos y victorias pasados. El tamaño de cada figura simboliza su poder, sus habilidades, su valor y su reputación. <br> <br>
+        Un llamado ancestral ha reunido a los mejores 10 combatientes, quienes han crecido en fuerza con sus enfrentamientos y victorias pasados. Luego de una larga espera, la batalla ha dado su inicio. El tamaño de cada guerrero representa visualmente la cantidad de vida y fuerza restante. <br> <br>
 
-        No solo son combatientes. Son vikingos que cuentan historias. <i>Brak el Gladiador</i>, quien ha estado en constante ascenso, tendrá que enfrentarse ahora con guerreros como <i>Hargoth el Imbatible</i>, cuyo poder ya había alcanzado a la cima convirtiéndose en una leyenda viviente. De a poco, Brak pierde cada vez más fuerza, mientras que Hargoth sigue casi intacto. ¿Será el fin del pequeño guerrero?
+        No solo son combatientes. Son vikingos que cuentan historias. <span class="dorado">Brak el Gladiador</span>, quien ha estado en constante ascenso, tendrá que enfrentarse ahora con leyendas como <span class="dorado">Hargoth el Imbatible</span>, un guerrero temido incluso entre los más valientes. ¿Quién se alzará como el verdadero campeón de la Arena?
       </p>
     </div>
     
@@ -392,7 +400,7 @@ const intervalo = setInterval(() => {
           {:else}
             <p style="font-size:0.9rem; color:red">{player.vida}</p>
           {/if}
-          <img src={player.sprite} alt="catalogo" width={player.width} height={player.height}/>
+          <img class="zoom" src={player.sprite} alt="catalogo" width={player.width} height={player.height}/>
           <p style="font-size:1.05rem; color: white;">{player.nombre}</p>
         </div>
       {/each}
@@ -400,7 +408,67 @@ const intervalo = setInterval(() => {
 
   </div>
 
+  <div style="margin-top: 5rem;">
+    <h2 style="color: white; text-align: center;"> ─────────────────────────  ⚔️ Estadísticas De Combate ⚔️  ──────────────────────── </h2>
+    <div style="margin-left: 3.3rem;">
+      <div class="flourish-embed flourish-radar" data-src="visualisation/22656277" data-width="96%">
+        <script src="https://public.flourish.studio/resources/embed.js"></script>
+        <noscript>
+          <img src="https://public.flourish.studio/visualisation/22656277/thumbnail" width="95%" alt="radar visualization" />
+        </noscript>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  <div style="margin-left: 1.5rem; display: flex; flex-direction: row;">
+    <div style="width: 43rem;" class="flourish-embed flourish-chart" data-src="visualisation/22655516" data-width="100%">
+      <script src="https://public.flourish.studio/resources/embed.js"></script>
+      <noscript>
+        <img src="https://public.flourish.studio/visualisation/22655516/thumbnail" width="100%" alt="chart visualization" />
+      </noscript>
+    </div>
+
+    <div style="width: 31rem; color: white; padding-top: 6.4rem;">
+      <p>
+        En la Arena de los Campeones, cada guerrero ha estado perfeccionando su estilo de combate, equilibrando tres atributos clave: <span class="rojo2">ataque</span>, <span class="verde">resistencia</span> y <span class="azul">velocidad</span>. <br> <br>
+
+        Las combinaciones varían notablemente entre ellos. Algunos como <span class="dorado">Hakon</span>, destacan por su ofensiva y agilidad, aunque sacrifican resistencia en el campo de batalla. Otros como <span class="dorado">Ragnar</span>, no sobresalen en ninguna categoría individual, pero han superado igualmente sus límites manteniéndose todavía con vida. <br> <br>
+
+        Durante mucho tiempo, todas las apuestas apuntaban hacia una final entre los hermanos <span class="dorado">Viggo</span> y <span class="dorado">Kolska</span>, dado que superan en características al resto. Su rivalidad fraternal se convirtió en leyenda, y su enfrentamiento, en una de las batallas más esperadas. Sin embargo, los giros del destino han debilitado cada vez más sus fuerzas, y ahora su futuro es incierto. Pero... ¿y si todo lo que creías del combate… estaba por cambiar?
+      </p>
+    </div>
+  </div>
+
 </main>
+  
+
+<footer>
+  <div class="footer_contenedor">
+    <p class="gris" style="font-size: 14px; margin-bottom: 0">Denis Wu <br>
+      Proyecto I: El lenguaje visual de los datos <br>
+      Visualización de Datos - Licenciatura en Tecnología Digital 2025
+    </p>
+    <div class="redes_contenedor">
+      <a href="https://github.com/Denis0827" target="_blank">
+        <img style="width: 31px; height: 31px;" src="./images/github.png" alt="github">
+      </a>
+      <a href="https://www.linkedin.com/in/deniswu0827/" target="_blank">
+        <img style="width: 43px; height: 43px; margin-left: 3px;" src="./images/linkedin.png" alt="linkedin">
+      </a>
+      <a href="https://www.instagram.com/denisito0827/" target="_blank">
+        <img style="width: 33px; height: 33px; margin-left: 3px;" src="./images/instagram.png" alt="instagram">
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=100075782354851&locale=es_LA" target="_blank">
+        <img style="width: 35px; height: 35px; margin-left: 7px;" src="./images/facebook.png" alt="facebook">
+      </a>
+      <a href="https://x.com/Denis91547332" target="_blank">
+        <img style="width: 55px; height: 55px;" src="./images/x.png" alt="x"> 
+      </a>
+    </div>
+  </div>
+</footer>
 
 <!-- Estilos CSS -->
 <style>
