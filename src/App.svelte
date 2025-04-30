@@ -121,6 +121,7 @@
     <hr style="width: 40em;">
   </div>
 
+
   <div class="visualizacion1 fondo">
 
     <div class="barra_flex">
