@@ -14,12 +14,6 @@
   let p8 = "./images/personaje8.png";
   let p9 = "./images/personaje9.png";
   let p10 = "./images/personaje10.png";
-  let p11 = "./images/personaje11.png";
-  let p12 = "./images/personaje12.png";
-  let p13 = "./images/personaje13.png";
-  let p14 = "./images/personaje14.png";
-  let p15 = "./images/personaje15.png";
-  let p16 = "./images/personaje16.png";
 
   /* Avatares */
   let a1 = "./images/avatar1.png";
@@ -39,15 +33,15 @@
 
   let players = [
     { sprite: p1, avatar: a1, vida: 24, nombre: "Brak", padding: 14.7 },
-    { sprite: p14, avatar: a10, vida: 33, nombre: "Poki", padding: 14.5 },
-    { sprite: p3, avatar: a9, vida: 42, nombre: "Bocón", padding: 14  },
+    { sprite: p2, avatar: a2, vida: 33, nombre: "Poki", padding: 14.5 },
+    { sprite: p3, avatar: a3, vida: 42, nombre: "Bocón", padding: 14  },
     { sprite: p4, avatar: a4, vida: 54, nombre: "Hakon", padding: 13.4  },
-    { sprite: p10, avatar: a5, vida: 63, nombre: "Viggo", padding: 12.4  },
-    { sprite: p11, avatar: a6, vida: 71, nombre: "Kolska", padding: 10 },
-    { sprite: p6, avatar: a2, vida: 77, nombre: "Ragnar", padding: 10 },
-    { sprite: p2, avatar: a8, vida: 87, nombre: "Hargoth", padding: 8.5 },
-    { sprite: p16, avatar: a3, vida: 92, nombre: "Torvald", padding: 8 },
-    { sprite: p13, avatar: a7, vida: 98, nombre: "Zerak", padding: 4.8 }
+    { sprite: p5, avatar: a5, vida: 63, nombre: "Viggo", padding: 12.4  },
+    { sprite: p6, avatar: a6, vida: 71, nombre: "Kolska", padding: 10 },
+    { sprite: p7, avatar: a7, vida: 77, nombre: "Ragnar", padding: 10 },
+    { sprite: p8, avatar: a8, vida: 87, nombre: "Hargoth", padding: 8.5 },
+    { sprite: p9, avatar: a9, vida: 92, nombre: "Torvald", padding: 8 },
+    { sprite: p10, avatar: a10, vida: 98, nombre: "Zerak", padding: 4.8 }
   ]
 
   let player_actual = players[0];
@@ -121,11 +115,11 @@
     <hr style="width: 40em;">
   </div>
 
-  <div class="fondo_contenedor">
-    <img src="./images/fondo.png" alt="fondo" class="fondo_imagen" />
-    <!-- Contenido principal -->
+  <div class="fondo_contenedor visualizacion1">
+    <img src="./images/fondo.png" alt="fondo" class="fondo_imagen"/>
+
     <div class="contenido">
-      <!-- Aquí va el contenido que debe estar encima de la imagen -->
+
       <div class="barra_flex">
         <div class="avatar_flex">
           <img class="avatar" src={player_actual.avatar} alt="avatar1"/>
@@ -200,84 +194,6 @@
       </div>
     </div>
   </div>
-
-  <div class="visualizacion1 fondo">
-
-    <div class="barra_flex">
-      <div class="avatar_flex">
-        <img class="avatar" src={player_actual.avatar} alt="avatar1"/>
-        <div class="barra1">
-          {#if player_actual.vida > 70}
-            <div style="height: 100%; width: {player_actual.vida}%; background-color: green;">
-              <p class="tamaño_vidaN24 blanco">{player_actual.vida}%</p>
-            </div>
-          {:else if player_actual.vida > 35}
-            <div style="height: 100%; width: {player_actual.vida}%; background-color: orange;">
-              <p class="tamaño_vidaN24 blanco">{player_actual.vida}%</p>
-            </div>
-          {:else}
-            <div style="height: 100%; width: {player_actual.vida}%; background-color: red;">
-              <p class="tamaño_vidaN24 blanco">{player_actual.vida}%</p>
-            </div>
-          {/if}
-        </div>
-      </div>
-      
-      <div class="avatar_flex">
-        <div class="barra2">
-          {#if player_actual_rival.vida > 70}
-          <div style="height: 100%; width: {player_actual_rival.vida}%; background-color: green;">
-            <p class="tamaño_vidaN87 blanco">{player_actual_rival.vida}%</p>
-          </div>
-          {:else if player_actual_rival.vida > 35}
-          <div style="height: 100%; width: {player_actual_rival.vida}%; background-color: orange;">
-            <p class="tamaño_vidaN87 blanco">{player_actual_rival.vida}%</p>
-          </div>
-          {:else}
-          <div style="height: 100%; width: {player_actual_rival.vida}%; background-color: red;">
-            <p class="tamaño_vidaN87 blanco">{player_actual_rival.vida}%</p>
-          </div>
-          {/if}
-        </div>
-        <img class="avatar" src={player_actual_rival.avatar} alt="avatar2"/>
-      </div>
-        
-    </div>
-
-    <div class="player_flex" style="padding-top: {espacio_padding}">
-      
-      <div style="padding-left: {player_actual.padding}rem;">
-        <img style="height: {altura(player_actual.vida)}rem;" src={player_actual.sprite} alt="person"/>
-      </div>
-
-      <div style="padding-right: {player_actual_rival.padding}rem;">
-        <img style="height: {altura(player_actual_rival.vida)}rem;" class="player2" src={player_actual_rival.sprite} alt="person"/>
-      </div>
-
-    </div>
-
-    <div class="flechas_container"> 
-
-      <button class="boton1" on:click={spriteAnterior}>
-        <img class="flecha" src="./images/flecha_izq.svg" alt="flecha_izq"/>
-      </button>
-
-      <button class="boton1" on:click={spriteSiguiente}>
-        <img class="flecha" src="./images/flecha_der.svg" alt="flecha_izq"/>
-      </button>
-
-      <button class="boton2" on:click={spriteAnterior_rival}>
-        <img class="flecha" src="./images/flecha_izq.svg" alt="flecha_izq"/>
-      </button>
-
-      <button class="boton1" on:click={spriteSiguiente_rival}>
-        <img class="flecha" src="./images/flecha_der.svg" alt="flecha_izq"/>
-      </button>
-
-    </div>
-
-  </div>
-
   
   <div class="catalogo">
     <div>

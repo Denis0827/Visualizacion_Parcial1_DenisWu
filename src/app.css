@@ -76,35 +76,23 @@ img {
     margin: 3rem 13rem;
 }
 
-.fondo {
-    background-image: url("./images/fondo.png");
-    height: 35rem; 
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
 
 .fondo_contenedor {
-    position: relative; /* Contenedor relativo para posicionar elementos hijos */
-    width: 100%;
-    height: 35rem; /* Ajusta según el tamaño necesario */
-    overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
-  }
+    position: relative; 
+    width: 54rem;
+    height: 35rem; 
+    overflow: hidden; 
+}
   
-  .fondo_imagen {
+.fondo_imagen {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
-    z-index: -1; /* Envía la imagen detrás del contenido */
-  }
+    z-index: -1; 
+}
   
-  .contenido {
-    position: relative; /* Asegura que el contenido esté encima de la imagen */
-    z-index: 1; /* Coloca el contenido por encima de la imagen */
-  }
+.contenido {
+    position: relative; 
+    z-index: 1; 
+}
 
 .avatar_flex {
     display: flex;
