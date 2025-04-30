@@ -31,7 +31,11 @@ img {
 }
 
 .rojo2 {
-    color: #ff1e00;
+    color: #c45959;
+}
+
+.rojo3 {
+    color: rgb(255, 49, 49);
 }
 
 .gris {
@@ -164,7 +168,7 @@ img {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    padding-left: 12.5rem;
+    justify-content: space-between;
 }
 
 
@@ -199,92 +203,22 @@ img {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 4.5rem;
+    gap: 6rem;
 }
 
 .visualizacion2 {
     margin: 4rem;
 }
 
-.flex_numeros_player {
-    display: flex;
-    flex-direction: column;
-}
-
-.display_v2 {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    gap: 2rem;
-    margin-top: 4.5rem;
-}
-
-.player1_v2 {
-    width: 8.5rem;
-    height: 7.8rem;
-}
-
-.player2_v2 {
-    width: 15.35rem;
-    height: 15.35rem;
-}
 
 .tamaño_texto {
-    width: 32rem;
+    width: 40rem;
 }
 
-.linea_vertical1 {
-    width: 2px; 
-    height: 8rem;
-    background-color: rgba(171, 171, 171, 0.409); 
+.trailer {
+    padding-top: 4.5rem;
 }
 
-.medicion {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    align-items: flex-end;
-}
-
-
-.linea_horizontal1 {
-    width: 8rem; 
-    height: 2px; 
-    background-color: rgba(171, 171, 171, 0.409); 
-}
-
-.linea_vertical2 {
-    width: 2px; 
-    height: 15.2rem;
-    background-color: rgba(171, 171, 171, 0.409); 
-}
-
-
-.linea_horizontal2 {
-    width: 15.2rem; 
-    height: 2px; 
-    background-color: rgba(171, 171, 171, 0.409); 
-}
-
-.numeros_medida {
-    font-size: 16px;
-}
-
-.flex_numeros {
-    display: flex;
-}
-
-.player_magnitudN24 {
-    margin-left: 6.25rem;
-    background-color: rgb(18, 18, 18); 
-    padding: 8px 25px; 
-}
-
-.player_magnitudN87 {
-    margin-left: 9.25rem;
-    background-color: rgb(18, 18, 18); 
-    padding: 8px 25px; 
-}
 
 .catalogo {
     margin: 4rem;
@@ -294,6 +228,7 @@ img {
     display: flex;
     align-items: flex-end;
     padding: 1.3rem 1rem;
+    padding-bottom: 2.25rem;
     gap: 0.4rem;
     border: 2px solid rgba(184, 184, 184, 0.612); 
     background-color: rgba(168, 154, 154, 0.16);
@@ -314,7 +249,7 @@ img {
   }
   
   .zoom:hover {
-    transform: scale(1.2); 
+    transform: scale(1.1); 
   }
   
 footer {
@@ -334,4 +269,49 @@ footer {
     flex-direction: row; 
     align-items: center; 
     gap: 4px;
+}
+
+.redes_contenedor img {
+    filter: grayscale(100%); 
+    opacity: 0.55;
+    transition: filter 0.3s ease; 
+  }
+  
+  .redes_contenedor img:hover {
+    filter: none; 
+    opacity: 1;
+  }
+
+.comparacion_alturas {
+    position: relative;
+    width: 100%;
+  }
+  
+  .linea_horizontal {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(148, 148, 148, 0.742);
+    opacity: 0.5;
+    z-index: 1; 
+    text-align: left;
+    font-size: 0.8rem;
+    color: white;
+    padding-left: 5px; 
+  }
+
+
+.vida:hover {
+    opacity: 1;
+}
+
+.vida {
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.vida_contenedor:hover .vida {
+    opacity: 1;
 }
