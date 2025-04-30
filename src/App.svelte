@@ -197,7 +197,7 @@
   
   <div class="catalogo">
     <div>
-      <h2 style="color: white; text-align: center;"> ───────────────────────────  ❤️ Estadísticas de vida ❤️  ────────────────────────── </h2>
+      <h2 style="color: white; text-align: center;"> ──────────────  ❤️ Estadísticas de vida ❤️  ────────────── </h2>
       <p style="text-align:center; font-size: 1.25rem;" class="blanco">Presione sobre cada personaje para visualizar su vida restante</p>
     </div>
 
@@ -264,7 +264,7 @@
 
 
   <div style="margin-top: 5rem;">
-    <h2 style="color: white; text-align: center;"> ─────────────────────────  ⚔️ Estadísticas de combate ⚔️  ──────────────────────── </h2>
+    <h2 style="color: white; text-align: center;"> ──────────────  ⚔️ Estadísticas de combate ⚔️  ────────────── </h2>
     
     <div style="margin-left: 3.3rem;">
       <div class="flourish-embed flourish-radar" data-src="visualisation/22656277" data-width="96%">
