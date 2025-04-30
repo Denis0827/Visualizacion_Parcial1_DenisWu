@@ -8,9 +8,9 @@
 ## Descripción:
 En el reino de Valdranor, la Arena de los Campeones era el lugar donde solo los guerreros más valientes podían demostrar su honor. Durante siglos, grandes batallas se habían librado allí, pero ninguna como la que estaba por suceder.
 
-Un llamado ancestral ha reunido a cada uno de los guerreros, quienes han crecido en fuerza con sus enfrentamientos y victorias pasados. El tamaño de cada figura simboliza su poder, sus habilidades, su valor y su reputación.
+Un llamado ancestral ha reunido a los mejores 10 combatientes, quienes han crecido en fuerza con sus enfrentamientos y victorias pasados. Luego de una larga espera, la batalla ha dado su inicio.
 
-No solo son combatientes. Son vikingos que cuentan historias. Brak el Gladiador, quien ha estado en constante ascenso, tendrá que enfrentarse ahora con guerreros como Hargoth el Imbatible, cuyo poder ya había alcanzado a la cima convirtiéndose en una leyenda viviente. De a poco, Brak pierde cada vez más fuerza, mientras que Hargoth sigue casi intacto. ¿Será el fin del pequeño guerrero?
+No solo son combatientes. Son vikingos que cuentan historias. Brak el Gladiador, quien ha estado en constante ascenso, tendrá que enfrentarse ahora con leyendas como Hargoth el Imbatible, un guerrero temido incluso entre los más valientes. ¿Quién se alzará como el verdadero campeón de la Arena?
 
 ## Catálogo:
 ![VD](Catalogo.png)
