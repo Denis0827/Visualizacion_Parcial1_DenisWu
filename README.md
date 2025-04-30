@@ -16,6 +16,7 @@ No solo son combatientes. Son vikingos que cuentan historias. Brak el Gladiador,
 ![VD](Catalogo.png)
 
 ## Gráficos:
+![VD](Grafico1.png)
 ![VD](Grafico2.png)
 
 ## Estructura de archivos:
