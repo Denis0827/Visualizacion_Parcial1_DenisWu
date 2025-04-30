@@ -1,4 +1,4 @@
-# VD | Maqueta inicial web (HTML, CSS, Svelte)
+# VD | DashBoard Web
 
 <!-- image .md -->
 ![VD](Preview.png)
@@ -14,6 +14,10 @@ No solo son combatientes. Son vikingos que cuentan historias. Brak el Gladiador,
 
 ## Catálogo:
 ![VD](Catalogo.png)
+
+## Gráficos:
+![VD](Grafico1.png)
+![VD](Grafico2.png)
 
 ## Estructura de archivos:
 ![VD](estructura_archivos.png)
