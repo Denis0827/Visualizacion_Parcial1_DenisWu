@@ -12,15 +12,14 @@ Un llamado ancestral ha reunido a los mejores 10 combatientes, quienes han creci
 
 No solo son combatientes. Son vikingos que cuentan historias. Brak el Gladiador, quien ha estado en constante ascenso, tendrá que enfrentarse ahora con leyendas como Hargoth el Imbatible, un guerrero temido incluso entre los más valientes. ¿Quién se alzará como el verdadero campeón de la Arena?
 
+---
+
 ## Catálogo:
 ![VD](Catalogo.png)
 
 ## Gráficos:
 ![VD](Grafico1.png)
 ![VD](Grafico2.png)
-
-## Estructura de archivos:
-![VD](estructura_archivos.png)
 
 
 ## Requerimientos:
