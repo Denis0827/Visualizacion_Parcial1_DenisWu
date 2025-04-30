@@ -121,6 +121,85 @@
     <hr style="width: 40em;">
   </div>
 
+  <div class="fondo_contenedor">
+    <img src="./images/fondo.png" alt="fondo" class="fondo_imagen" />
+    <!-- Contenido principal -->
+    <div class="contenido">
+      <!-- Aquí va el contenido que debe estar encima de la imagen -->
+      <div class="barra_flex">
+        <div class="avatar_flex">
+          <img class="avatar" src={player_actual.avatar} alt="avatar1"/>
+          <div class="barra1">
+            {#if player_actual.vida > 70}
+              <div style="height: 100%; width: {player_actual.vida}%; background-color: green;">
+                <p class="tamaño_vidaN24 blanco">{player_actual.vida}%</p>
+              </div>
+            {:else if player_actual.vida > 35}
+              <div style="height: 100%; width: {player_actual.vida}%; background-color: orange;">
+                <p class="tamaño_vidaN24 blanco">{player_actual.vida}%</p>
+              </div>
+            {:else}
+              <div style="height: 100%; width: {player_actual.vida}%; background-color: red;">
+                <p class="tamaño_vidaN24 blanco">{player_actual.vida}%</p>
+              </div>
+            {/if}
+          </div>
+        </div>
+        
+        <div class="avatar_flex">
+          <div class="barra2">
+            {#if player_actual_rival.vida > 70}
+            <div style="height: 100%; width: {player_actual_rival.vida}%; background-color: green;">
+              <p class="tamaño_vidaN87 blanco">{player_actual_rival.vida}%</p>
+            </div>
+            {:else if player_actual_rival.vida > 35}
+            <div style="height: 100%; width: {player_actual_rival.vida}%; background-color: orange;">
+              <p class="tamaño_vidaN87 blanco">{player_actual_rival.vida}%</p>
+            </div>
+            {:else}
+            <div style="height: 100%; width: {player_actual_rival.vida}%; background-color: red;">
+              <p class="tamaño_vidaN87 blanco">{player_actual_rival.vida}%</p>
+            </div>
+            {/if}
+          </div>
+          <img class="avatar" src={player_actual_rival.avatar} alt="avatar2"/>
+        </div>
+          
+      </div>
+  
+      <div class="player_flex" style="padding-top: {espacio_padding}">
+        
+        <div style="padding-left: {player_actual.padding}rem;">
+          <img style="height: {altura(player_actual.vida)}rem;" src={player_actual.sprite} alt="person"/>
+        </div>
+  
+        <div style="padding-right: {player_actual_rival.padding}rem;">
+          <img style="height: {altura(player_actual_rival.vida)}rem;" class="player2" src={player_actual_rival.sprite} alt="person"/>
+        </div>
+  
+      </div>
+  
+      <div class="flechas_container"> 
+  
+        <button class="boton1" on:click={spriteAnterior}>
+          <img class="flecha" src="./images/flecha_izq.svg" alt="flecha_izq"/>
+        </button>
+  
+        <button class="boton1" on:click={spriteSiguiente}>
+          <img class="flecha" src="./images/flecha_der.svg" alt="flecha_izq"/>
+        </button>
+  
+        <button class="boton2" on:click={spriteAnterior_rival}>
+          <img class="flecha" src="./images/flecha_izq.svg" alt="flecha_izq"/>
+        </button>
+  
+        <button class="boton1" on:click={spriteSiguiente_rival}>
+          <img class="flecha" src="./images/flecha_der.svg" alt="flecha_izq"/>
+        </button>
+  
+      </div>
+    </div>
+  </div>
 
   <div class="visualizacion1 fondo">
 
