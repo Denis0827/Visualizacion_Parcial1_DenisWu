@@ -17,10 +17,15 @@ No solo son combatientes. Son vikingos que cuentan historias. Brak el Gladiador,
 ## Catálogo:
 ![VD](Catalogo.png)
 
+En esta visualización web, se representa a cada guerrero con un tamaño proporcional a su vida restante. A medida que reciben daño, su figura se reduce, reflejando no solo su desgaste físico, sino también la merma de su poder.
+
+---
+
 ## Gráficos:
 ![VD](Grafico1.png)
 ![VD](Grafico2.png)
 
+---
 
 ## Requerimientos:
 
