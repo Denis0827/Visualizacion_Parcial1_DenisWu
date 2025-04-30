@@ -1,4 +1,4 @@
-# VD | Maqueta inicial web (HTML, CSS, Svelte)
+# VD | DashBoard Web
 
 <!-- image .md -->
 ![VD](Preview.png)
@@ -12,12 +12,20 @@ Un llamado ancestral ha reunido a los mejores 10 combatientes, quienes han creci
 
 No solo son combatientes. Son vikingos que cuentan historias. Brak el Gladiador, quien ha estado en constante ascenso, tendrá que enfrentarse ahora con leyendas como Hargoth el Imbatible, un guerrero temido incluso entre los más valientes. ¿Quién se alzará como el verdadero campeón de la Arena?
 
+---
+
 ## Catálogo:
 ![VD](Catalogo.png)
 
-## Estructura de archivos:
-![VD](estructura_archivos.png)
+En esta visualización web, se representa a cada guerrero con un tamaño proporcional a su vida restante. A medida que reciben daño, su figura se reduce, reflejando no solo su desgaste físico, sino también la merma de su poder.
 
+---
+
+## Gráficos:
+![VD](Grafico1.png)
+![VD](Grafico2.png)
+
+---
 
 ## Requerimientos:
 
