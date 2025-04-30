@@ -77,7 +77,7 @@ img {
 }
 
 .fondo {
-    background-image: url("/images/fondo.png");
+    background-image: url("./images/fondo.png");
     height: 35rem; 
     background-size: contain;
     background-repeat: no-repeat;
